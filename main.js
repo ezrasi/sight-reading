@@ -1,15 +1,19 @@
 
-
+let pianoWorks = [];
 document.getElementById("submitBtn").onclick = getPiece;
 const display = document.getElementById("display");
 
-async function getPiece() {
+
+async function loadPianoWorks() {
   const response = await fetch('./imslp_piano_works.json'); 
-  const pianoWorks = await response.json();
+  pianoWorks = await response.json();
+}
+
+async function getPiece() {
   const randomIndex = Math.floor(Math.random() * pianoWorks.length);
   const randomPianoWork = pianoWorks[randomIndex];
 
-  display.innerHTML = randomPianoWork.title + "\n" + randomPianoWork.url;
+  display.innerHTML = `<h3>Title</h3> <br> ${randomPianoWork.title} <br> <h3>URL</h3><br> 
+                        <a href="${randomPianoWork.url}" target=__blank">${randomPianoWork.url}</a>`;
 }
-console.log(randomPianoWork);
 
