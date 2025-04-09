@@ -1,0 +1,97 @@
+/* Base typography & layout
+   ------------------------ */
+   :root {
+    --accent: #2d6cdf;
+    --accent-dark: #1d4eaa;
+    --bg: #f9fafb;
+    --text: #111;
+    --radius: 0.75rem;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.55;
+    margin: 0;
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  /* Card wrapper */
+  .card {
+    background: #fff;
+    padding: 2.5rem 2rem 3rem;
+    max-width: 34rem;
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    text-align: center;
+  }
+  
+  /* Headings */
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin: 0 0 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    margin: 2rem 0 0.5rem;
+  }
+  
+  /* Primary button */
+  .btn-primary {
+    font: inherit;
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.4s ease, font-size 0.4s ease
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    background: var(--accent-dark);
+    font-size: 0.9em;
+    
+  }
+  
+  /* Result area */
+  #result {
+    margin-top: 1.5rem;
+  }
+  
+  .result-title {
+    margin: 0;
+  }
+  
+  .result-link {
+    color: var(--accent-dark);
+    text-decoration: none;
+  }
+  
+  .result-link:hover {
+    text-decoration: underline;
+  }
+  

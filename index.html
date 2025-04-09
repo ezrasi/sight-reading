@@ -2,13 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Solo Piano Piece</title>
 
+    <!-- Google Font (optional, but adds personality) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <h1>Random Solo Piano Piece</h1>
-    <input type="submit" id="submitBtn" value="Get Random Piano Piece"></input>
-    <div id="display"></div>
-    <script src="./main.js"></script>
+    <main class="card">
+        <h1>Random Solo Piano Piece</h1>
+        <div>
+            <button id="submitBtn" class="btn-primary">
+                Get Random Piano Piece
+            </button>
+        </div>
+
+        <section id="result" hidden>
+            <h2 id="title" class="result-title"></h2>
+            <p>
+                <a id="url" class="result-link" href="#" target="_blank" rel="noopener">Open on IMSLP</a>
+            </p>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
 </body>
+
+</html>
