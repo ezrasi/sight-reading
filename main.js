@@ -1,14 +1,14 @@
-const fs = require('fs');
 
-const rawData = fs.readFileSync('./imslp_piano_works.json');
-const pianoWorks = JSON.parse(rawData);
-const randomIndex = Math.floor(Math.random() * pianoWorks.length);
-const randomPianoWork = pianoWorks[randomIndex];
 
-document.getElementById("btn").onclick = getPiece;
+document.getElementById("submitBtn").onclick = getPiece;
 const display = document.getElementById("display");
 
-function getPiece() {
+async function getPiece() {
+  const response = await fetch('./imslp_piano_works.json'); 
+  const pianoWorks = await response.json();
+  const randomIndex = Math.floor(Math.random() * pianoWorks.length);
+  const randomPianoWork = pianoWorks[randomIndex];
+
   display.innerHTML = randomPianoWork.title + "\n" + randomPianoWork.url;
 }
 console.log(randomPianoWork);
