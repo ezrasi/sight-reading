@@ -18,7 +18,6 @@
     font-size: 16px;
     font-family: "Inter", system-ui, sans-serif;
     color: var(--text);
-    background: var(--bg);
     line-height: 1.55;
     margin: 0;
     background-image: url(./background.jpg);
@@ -73,7 +72,7 @@
   .btn-primary:hover,
   .btn-primary:focus-visible {
     background: var(--accent-dark);
-    font-size: 0.9em;
+    font-size: 0.95em;
     
   }
   
