@@ -1,8 +1,8 @@
 /* ----------  Cache DOM elements  ---------- */
 const btn           = document.getElementById("submitBtn");
-const resultSection = document.getElementById("result"); // <section hidden>
-const titleEl       = document.getElementById("title");  // <h2 id="title">
-const urlEl         = document.getElementById("url");    // <a id="url">
+const resultSection = document.getElementById("result"); 
+const titleEl       = document.getElementById("title"); 
+const urlEl         = document.getElementById("url");   
 
 /* ----------  Data store  ---------- */
 let pianoWorks = [];
@@ -17,14 +17,14 @@ let pianoWorks = [];
     btn.disabled = false;
   } catch (err) {
     console.error("Couldn’t load piano works:", err);
-    btn.textContent = "Failed to load list 😢";
+    btn.textContent = "Failed to load list";
     btn.disabled = true;
   }
 })();
 
 /* ----------  Handle button clicks  ---------- */
 btn.addEventListener("click", () => {
-  if (!pianoWorks.length) return;          // safety guard
+  if (!pianoWorks.length) return;         
 
   const randomWork = pianoWorks[Math.floor(Math.random() * pianoWorks.length)];
 
