@@ -79,7 +79,14 @@
   }
   
   /* Result area */
-  #result {
+  #result[hidden] {
+    display: none;
+  }
+
+  #result:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 1.5rem;
   }
   
@@ -96,3 +103,9 @@
     text-decoration: underline;
   }
   
+  #resultDiv {
+    background-color: rgba(250, 235, 215, 0.711);
+    border-radius: 1rem;
+    width: 100%;
+    padding: 1rem;
+  }

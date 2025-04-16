@@ -2,6 +2,7 @@
 const soloPianoBtn        = document.getElementById("soloPianoBtn");
 const featuringPianoBtn   = document.getElementById("featuringPianoBtn");
 const arrangedForPianoBtn = document.getElementById("arrangedForPianoBtn"); // Already cached
+const pieceType           = document.getElementById("pieceType");
 const resultSection       = document.getElementById("result");
 const titleEl             = document.getElementById("title");
 const urlEl               = document.getElementById("url");
@@ -116,6 +117,7 @@ function displayResult(work) {
 soloPianoBtn.addEventListener("click", () => {
   if (!soloPianoWorks.length) return;
   const randomWork = soloPianoWorks[Math.floor(Math.random() * soloPianoWorks.length)];
+  pieceType.innerHTML = "<u>Solo Piano Piece:</u>"; 
   displayResult(randomWork);
 });
 
@@ -123,6 +125,7 @@ soloPianoBtn.addEventListener("click", () => {
 featuringPianoBtn.addEventListener("click", () => {
   if (!featuringPianoWorks.length) return;
   const randomWork = featuringPianoWorks[Math.floor(Math.random() * featuringPianoWorks.length)];
+  pieceType.innerHTML = "<u>Piece Featuring Piano:</u>"; 
   displayResult(randomWork);
 });
 
@@ -130,5 +133,6 @@ featuringPianoBtn.addEventListener("click", () => {
 arrangedForPianoBtn.addEventListener("click", () => {
   if (!arrangedForPianoWorks.length) return; // Use the new data array
   const randomWork = arrangedForPianoWorks[Math.floor(Math.random() * arrangedForPianoWorks.length)];
+  pieceType.innerHTML = "<u>Piece Arranged For Piano:</u>"; 
   displayResult(randomWork);
 });
